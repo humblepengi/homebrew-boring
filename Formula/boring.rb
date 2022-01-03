@@ -5,21 +5,21 @@
 class Boring < Formula
   desc "A boooring cli"
   homepage "http://github.com/humblepengi/boring/"
-  version "0.0.4"
+  version "0.0.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "http://github.com/humblepengi/boring/releases/v0.0.4/boring_0.0.4_macOS_amd64.tar.gz"
-      sha256 "8c6416a70e07f7315a30406a57effdc71a19ce1435398333a7cadd436c1f771c"
+      url "http://github.com/humblepengi/boring/releases/download/v0.0.5/boring_0.0.5_macOS_amd64.tar.gz"
+      sha256 "29e7dc10004578faa7cbc9295de5e0745b38b64734ac5e14cdd716b12d507669"
 
       def install
         bin.install "bin/boring"
       end
     end
     if Hardware::CPU.arm?
-      url "http://github.com/humblepengi/boring/releases/v0.0.4/boring_0.0.4_macOS_arm64.tar.gz"
-      sha256 "2e11de86dc676b6e02948fe44dd036f4bec77a7011ce1b7c5dc32c64ade0d302"
+      url "http://github.com/humblepengi/boring/releases/download/v0.0.5/boring_0.0.5_macOS_arm64.tar.gz"
+      sha256 "945a0f474fc9c2b126b0e99fc65e49f828d804bd92694414dcdb103ce69587aa"
 
       def install
         bin.install "bin/boring"
@@ -29,24 +29,24 @@ class Boring < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "http://github.com/humblepengi/boring/releases/v0.0.4/boring_0.0.4_linux_armv6.tar.gz"
-      sha256 "45de78ed722350ae35f91ab6503787c7abcb8d76bf87e3276d5afaf2ad8e99f8"
-
-      def install
-        bin.install "bin/boring"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "http://github.com/humblepengi/boring/releases/v0.0.4/boring_0.0.4_linux_amd64.tar.gz"
-      sha256 "da2a13bbe1008d73a569a4171b39166c8774e81ec4689829df9ceba7a3c475eb"
+      url "http://github.com/humblepengi/boring/releases/download/v0.0.5/boring_0.0.5_linux_armv6.tar.gz"
+      sha256 "b1390557ba8dd272b25b4c96fe8fb5c1486ff37dd283795486872d58c43888e6"
 
       def install
         bin.install "bin/boring"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "http://github.com/humblepengi/boring/releases/v0.0.4/boring_0.0.4_linux_arm64.tar.gz"
-      sha256 "ef5771be6e8fb79b6bf1b2eb6296841f41ffa54445dab7cb8c00a6b9ef4e760b"
+      url "http://github.com/humblepengi/boring/releases/download/v0.0.5/boring_0.0.5_linux_arm64.tar.gz"
+      sha256 "00bec898b8845b303e4e83226a8519c243adeefa5f3d55f58bdbf38320709071"
+
+      def install
+        bin.install "bin/boring"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "http://github.com/humblepengi/boring/releases/download/v0.0.5/boring_0.0.5_linux_amd64.tar.gz"
+      sha256 "69826672690a9b793b745aff1dc47b73a6ac8f75f828653392737155ddfdaf9f"
 
       def install
         bin.install "bin/boring"
